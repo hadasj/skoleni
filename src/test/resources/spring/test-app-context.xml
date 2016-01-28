@@ -11,7 +11,9 @@
 
 	<!-- application beans -->
 	<bean id="obyvatelService" class="cz.i.service.ObyvatelService" />
+	<bean id="generator" class="cz.i.service.GeneratorService" />
 	<bean id="obyvatelDao" class="cz.i.dao.ObyvatelDao" />
+	<bean id="rodneCisloDao" class="cz.i.dao.RodneCisloDao" />
 	<bean id="validator" class="cz.i.validation.Validator" />
 
 	<!-- validator -->
