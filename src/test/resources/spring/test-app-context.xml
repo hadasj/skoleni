@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			 xmlns:context="http://www.springframework.org/schema/context" xmlns:p="http://www.springframework.org/schema/p"
+			 xmlns:tx="http://www.springframework.org/schema/tx"
+			 xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd
+       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.2.xsd">
+
+
+	<context:component-scan base-package="cz.i" />
+
+	<!-- application beans -->
+	<bean id="obyvatelService" class="cz.i.service.ObyvatelService" />
+	<bean id="obyvatelDao" class="cz.i.dao.ObyvatelDao" />
+	<bean id="validator" class="cz.i.validation.Validator" />
+
+	<!-- validator -->
+	<bean id="springValidator" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean"/>
+
+	<!-- transactions -->
+	<bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+		<property name="entityManagerFactory" ref="entityManagerFactory" />
+	</bean>
+	<tx:annotation-driven transaction-manager="transactionManager" proxy-target-class="true" mode="proxy"/>
+
+	<!--Entity Manager-->
+	<bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+		<property name="persistenceUnitName" value="eo"/>
+		<property name="jtaDataSource" ref="dataSourceEo" />
+		<property name="jpaVendorAdapter" ref="jpaVendorAdapter"/>
+		<property name="packagesToScan" >
+			<list>
+				<value>cz.i.entity</value>
+			</list>
+		</property>
+		<property name="jpaPropertyMap">
+			<props>
+				<prop key="eclipselink.weaving">false</prop>
+				<prop key="javax.persistence.transactionType">JTA</prop>
+			</props>
+		</property>
+	</bean>
+	<bean id="jpaVendorAdapter" class="org.springframework.orm.jpa.vendor.EclipseLinkJpaVendorAdapter"/>
+
+	<!-- datasource -->
+	<bean id="dataSourceEo" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close"
+				p:driverClass="com.informix.jdbc.IfxDriver"
+				p:jdbcUrl="jdbc:informix-sqli://prach.i.cz:1556/hadasj_eo:INFORMIXSERVER=popel_ais3;DB_LOCALE=cs_cz.utf8;"
+				p:user="eo" p:password="eo123"
+				p:maxPoolSize="10" p:checkoutTimeout="60000" p:minPoolSize="1" p:autoCommitOnClose="true"/>
+	<bean id="eoDb" class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource" ref="dataSourceEo"/>
+	</bean>
+
+</beans>

@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../dataset.xsd">
+
+	<obyvatel id="1" druh="O" platnost="P" verze="0"
+						jmeno="Hugo" prijmeni="Boss"  rodne_cislo="9612114369" datum_narozeni="1996-12-11"  pohlavi="M"
+						aifo_kontrola="@auto" posledni_zmena="2016-12-23 11:28:59"
+			/>
+
+</dataset>
