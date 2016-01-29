@@ -29,11 +29,25 @@
 			</snapshots>
 		</repository>
 	</repositories>
+	<pluginRepositories>
+		<pluginRepository>
+			<id>ICZ-internal</id>
+			<url>http://maven-repo-2.i.cz:8888/artifactory/internal</url>
+			<releases>
+				<enabled>true</enabled>
+				<updatePolicy>never</updatePolicy>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+				<updatePolicy>never</updatePolicy>
+			</snapshots>
+		</pluginRepository>
+	</pluginRepositories>
 
 	<properties>
 		<version.spring>4.2.4.RELEASE</version.spring>
 		<version.atomikos>3.9.3</version.atomikos>
-		<version.informix>4.1</version.informix>
+		<version.informix>4.10.JC4</version.informix>
 		<version.log4j>2.5</version.log4j>
 	</properties>
 
@@ -103,7 +117,7 @@
 			<version>2.5.1</version>
 		</dependency>
 		<dependency>
-			<groupId>com.ibm.informix</groupId>
+			<groupId>com.informix.jdbc</groupId>
 			<artifactId>ifxjdbc</artifactId>
 			<version>${version.informix}</version>
 			<scope>test</scope>
@@ -203,7 +217,7 @@
 				</executions>
 				<dependencies>
 					<dependency>
-						<groupId>com.ibm.informix</groupId>
+						<groupId>com.informix.jdbc</groupId>
 						<artifactId>ifxjdbc</artifactId>
 						<version>${version.informix}</version>
 						<scope>runtime</scope>
