@@ -12,6 +12,7 @@ import net.sf.lightair.internal.factory.Factory;
 
 import org.dbunit.dataset.DataSetException;
 import org.dbunit.dataset.ITable;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,7 +28,7 @@ import cz.i.service.GeneratorService;
  */
 @RunWith(LightAirSpringRunner.class)
 @ContextConfiguration("classpath:spring/test-app-context.xml")
-public class TestIT {
+public class LightAirTrainingIT {
 
   @Autowired
   private GeneratorService generator;
@@ -35,6 +36,7 @@ public class TestIT {
   @Autowired
   private RodneCisloDao dao;
 
+  @Ignore
   @Test
   @Setup("../clean-all.xml")
   public void should_generate_100_rc() throws SQLException, DataSetException {
@@ -46,6 +48,7 @@ public class TestIT {
     assertEquals(100, rodneCislo.getRowCount());
   }
 
+  @Ignore
   @Test //TODO: FIX setup XML
   @Setup.List({@Setup("../clean-all.xml"), @Setup})
   public void should_find_Light_Air() {
