@@ -222,6 +222,12 @@
 						<version>${version.informix}</version>
 						<scope>runtime</scope>
 					</dependency>
+					<!-- FIX for windows -->
+					<dependency>
+						<groupId>commons-io</groupId>
+						<artifactId>commons-io</artifactId>
+						<version>2.4</version>
+					</dependency>
 				</dependencies>
 			</plugin>
 		</plugins>
