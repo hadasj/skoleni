@@ -48,7 +48,7 @@
 	<!-- datasource -->
 	<bean id="dataSourceEo" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close"
 				p:driverClass="com.informix.jdbc.IfxDriver"
-				p:jdbcUrl="jdbc:informix-sqli://prach.i.cz:1556/hadasj_eo:INFORMIXSERVER=popel_ais3;DB_LOCALE=cs_cz.utf8;"
+				p:jdbcUrl="jdbc:informix-sqli://prach.i.cz:1556/navrkal_eo:INFORMIXSERVER=popel_ais3;DB_LOCALE=cs_cz.utf8;"
 				p:user="eo" p:password="eo123"
 				p:maxPoolSize="10" p:checkoutTimeout="60000" p:minPoolSize="1" p:autoCommitOnClose="true"/>
 	<bean id="eoDb" class="org.springframework.jdbc.core.JdbcTemplate">

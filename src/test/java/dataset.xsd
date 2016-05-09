@@ -4,14 +4,16 @@
 	<xsd:element name="dataset">
 		<xsd:complexType>
 			<xsd:choice minOccurs="0" maxOccurs="unbounded">
-				<xsd:element name="archiv_zmen_rc" type="dflt:archiv_zmen_rc__type" />
 				<xsd:element name="doklad" type="dflt:doklad__type" />
+				<xsd:element name="doklad_hist" type="dflt:doklad_hist__type" />
 				<xsd:element name="dorucovaci_adresa" type="dflt:dorucovaci_adresa__type" />
 				<xsd:element name="dorucovaci_adresa_hist" type="dflt:dorucovaci_adresa_hist__type" />
-				<xsd:element name="duvod_prideleni_rc" type="dflt:duvod_prideleni_rc__type" />
 				<xsd:element name="iszr_davka" type="dflt:iszr_davka__type" />
 				<xsd:element name="iszr_notifikace" type="dflt:iszr_notifikace__type" />
-				<xsd:element name="iszr_notifikace_chyba" type="dflt:iszr_notifikace_chyba__type" />
+				<xsd:element name="iszr_org_zmena" type="dflt:iszr_org_zmena__type" />
+				<xsd:element name="iszr_rob_zmena" type="dflt:iszr_rob_zmena__type" />
+				<xsd:element name="iszr_ros_zmena" type="dflt:iszr_ros_zmena__type" />
+				<xsd:element name="iszr_ruian_zmena" type="dflt:iszr_ruian_zmena__type" />
 				<xsd:element name="napomoc" type="dflt:napomoc__type" />
 				<xsd:element name="napomoc_hist" type="dflt:napomoc_hist__type" />
 				<xsd:element name="nepridelene_rc_parametr" type="dflt:nepridelene_rc_parametr__type" />
@@ -23,7 +25,6 @@
 				<xsd:element name="obyvatel" type="dflt:obyvatel__type" />
 				<xsd:element name="obyvatel_hist" type="dflt:obyvatel_hist__type" />
 				<xsd:element name="obyvatel_stav" type="dflt:obyvatel_stav__type" />
-				<xsd:element name="odlozena_zmena" type="dflt:odlozena_zmena__type" />
 				<xsd:element name="opatrovnik" type="dflt:opatrovnik__type" />
 				<xsd:element name="opatrovnik_hist" type="dflt:opatrovnik_hist__type" />
 				<xsd:element name="osvojeni" type="dflt:osvojeni__type" />
@@ -40,41 +41,41 @@
 				<xsd:element name="predchozi_mn_mu" type="dflt:predchozi_mn_mu__type" />
 				<xsd:element name="predchozi_pohlavi" type="dflt:predchozi_pohlavi__type" />
 				<xsd:element name="predchozi_rc" type="dflt:predchozi_rc__type" />
+				<xsd:element name="predchozi_rc_jm_pr" type="dflt:predchozi_rc_jm_pr__type" />
+				<xsd:element name="predchozi_rc_mn_mu" type="dflt:predchozi_rc_mn_mu__type" />
 				<xsd:element name="predchozi_rod_stav" type="dflt:predchozi_rod_stav__type" />
 				<xsd:element name="predchozi_rodic" type="dflt:predchozi_rodic__type" />
 				<xsd:element name="prohlaseni_za_mrtveho" type="dflt:prohlaseni_za_mrtveho__type" />
 				<xsd:element name="prohlaseni_za_mrtveho_hist" type="dflt:prohlaseni_za_mrtveho_hist__type" />
 				<xsd:element name="reklamace" type="dflt:reklamace__type" />
-				<xsd:element name="reklamace_rc" type="dflt:reklamace_rc__type" />
 				<xsd:element name="reklamovany_udaj" type="dflt:reklamovany_udaj__type" />
-				<xsd:element name="reklamovany_udaj_rc" type="dflt:reklamovany_udaj_rc__type" />
 				<xsd:element name="rob_akt" type="dflt:rob_akt__type" />
 				<xsd:element name="rob_akt_data" type="dflt:rob_akt_data__type" />
-				<xsd:element name="rob_akt_data_hist" type="dflt:rob_akt_data_hist__type" />
-				<xsd:element name="rob_akt_hist" type="dflt:rob_akt_hist__type" />
 				<xsd:element name="rob_blacklist" type="dflt:rob_blacklist__type" />
 				<xsd:element name="rob_validacni_pravidla" type="dflt:rob_validacni_pravidla__type" />
 				<xsd:element name="rodinny_stav" type="dflt:rodinny_stav__type" />
 				<xsd:element name="rodne_cislo" type="dflt:rodne_cislo__type" />
+				<xsd:element name="rodne_cislo_hist" type="dflt:rodne_cislo_hist__type" />
 				<xsd:element name="rodne_cislo_puv" type="dflt:rodne_cislo_puv__type" />
 				<xsd:element name="rodne_cislo_stav" type="dflt:rodne_cislo_stav__type" />
 				<xsd:element name="rpp_akt_data" type="dflt:rpp_akt_data__type" />
 				<xsd:element name="slouceni" type="dflt:slouceni__type" />
 				<xsd:element name="slouceni_rc" type="dflt:slouceni_rc__type" />
+				<xsd:element name="slouceni_stare" type="dflt:slouceni_stare__type" />
+				<xsd:element name="stat" type="dflt:stat__type" />
 				<xsd:element name="svazek" type="dflt:svazek__type" />
 				<xsd:element name="svazek_hist" type="dflt:svazek_hist__type" />
 				<xsd:element name="svepravnost" type="dflt:svepravnost__type" />
 				<xsd:element name="svepravnost_hist" type="dflt:svepravnost_hist__type" />
-				<xsd:element name="typ_zmeny_rc" type="dflt:typ_zmeny_rc__type" />
 				<xsd:element name="uzivane_rc" type="dflt:uzivane_rc__type" />
 				<xsd:element name="verze" type="dflt:verze__type" />
+				<xsd:element name="vydat_polozky" type="dflt:vydat_polozky__type" />
 				<xsd:element name="vydej_dat" type="dflt:vydej_dat__type" />
 				<xsd:element name="vydej_kriteria" type="dflt:vydej_kriteria__type" />
 				<xsd:element name="vydej_soubor" type="dflt:vydej_soubor__type" />
 				<xsd:element name="vydejove_misto_rc" type="dflt:vydejove_misto_rc__type" />
 				<xsd:element name="vyrizeni_reklamace" type="dflt:vyrizeni_reklamace__type" />
-				<xsd:element name="zadost_poskytnuti" type="dflt:zadost_poskytnuti__type" />
-				<xsd:element name="zadost_poskytnuti_polozka" type="dflt:zadost_poskytnuti_polozka__type" />
+				<xsd:element name="zadosti_o_poskytnuti" type="dflt:zadosti_o_poskytnuti__type" />
 				<xsd:element name="zakaz_pobytu" type="dflt:zakaz_pobytu__type" />
 				<xsd:element name="zakaz_pobytu_hist" type="dflt:zakaz_pobytu_hist__type" />
 				<xsd:element name="zasobnik_aifo" type="dflt:zasobnik_aifo__type" />

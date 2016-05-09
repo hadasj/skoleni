@@ -2,14 +2,16 @@
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" xmlns="eo" targetNamespace="eo"
 	xmlns:la="http://lightair.sourceforge.net/">
 	<xsd:import namespace="http://lightair.sourceforge.net/" schemaLocation="light-air-types.xsd" />
-	<xsd:element name="archiv_zmen_rc" type="archiv_zmen_rc__type" />
 	<xsd:element name="doklad" type="doklad__type" />
+	<xsd:element name="doklad_hist" type="doklad_hist__type" />
 	<xsd:element name="dorucovaci_adresa" type="dorucovaci_adresa__type" />
 	<xsd:element name="dorucovaci_adresa_hist" type="dorucovaci_adresa_hist__type" />
-	<xsd:element name="duvod_prideleni_rc" type="duvod_prideleni_rc__type" />
 	<xsd:element name="iszr_davka" type="iszr_davka__type" />
 	<xsd:element name="iszr_notifikace" type="iszr_notifikace__type" />
-	<xsd:element name="iszr_notifikace_chyba" type="iszr_notifikace_chyba__type" />
+	<xsd:element name="iszr_org_zmena" type="iszr_org_zmena__type" />
+	<xsd:element name="iszr_rob_zmena" type="iszr_rob_zmena__type" />
+	<xsd:element name="iszr_ros_zmena" type="iszr_ros_zmena__type" />
+	<xsd:element name="iszr_ruian_zmena" type="iszr_ruian_zmena__type" />
 	<xsd:element name="napomoc" type="napomoc__type" />
 	<xsd:element name="napomoc_hist" type="napomoc_hist__type" />
 	<xsd:element name="nepridelene_rc_parametr" type="nepridelene_rc_parametr__type" />
@@ -21,7 +23,6 @@
 	<xsd:element name="obyvatel" type="obyvatel__type" />
 	<xsd:element name="obyvatel_hist" type="obyvatel_hist__type" />
 	<xsd:element name="obyvatel_stav" type="obyvatel_stav__type" />
-	<xsd:element name="odlozena_zmena" type="odlozena_zmena__type" />
 	<xsd:element name="opatrovnik" type="opatrovnik__type" />
 	<xsd:element name="opatrovnik_hist" type="opatrovnik_hist__type" />
 	<xsd:element name="osvojeni" type="osvojeni__type" />
@@ -38,41 +39,41 @@
 	<xsd:element name="predchozi_mn_mu" type="predchozi_mn_mu__type" />
 	<xsd:element name="predchozi_pohlavi" type="predchozi_pohlavi__type" />
 	<xsd:element name="predchozi_rc" type="predchozi_rc__type" />
+	<xsd:element name="predchozi_rc_jm_pr" type="predchozi_rc_jm_pr__type" />
+	<xsd:element name="predchozi_rc_mn_mu" type="predchozi_rc_mn_mu__type" />
 	<xsd:element name="predchozi_rod_stav" type="predchozi_rod_stav__type" />
 	<xsd:element name="predchozi_rodic" type="predchozi_rodic__type" />
 	<xsd:element name="prohlaseni_za_mrtveho" type="prohlaseni_za_mrtveho__type" />
 	<xsd:element name="prohlaseni_za_mrtveho_hist" type="prohlaseni_za_mrtveho_hist__type" />
 	<xsd:element name="reklamace" type="reklamace__type" />
-	<xsd:element name="reklamace_rc" type="reklamace_rc__type" />
 	<xsd:element name="reklamovany_udaj" type="reklamovany_udaj__type" />
-	<xsd:element name="reklamovany_udaj_rc" type="reklamovany_udaj_rc__type" />
 	<xsd:element name="rob_akt" type="rob_akt__type" />
 	<xsd:element name="rob_akt_data" type="rob_akt_data__type" />
-	<xsd:element name="rob_akt_data_hist" type="rob_akt_data_hist__type" />
-	<xsd:element name="rob_akt_hist" type="rob_akt_hist__type" />
 	<xsd:element name="rob_blacklist" type="rob_blacklist__type" />
 	<xsd:element name="rob_validacni_pravidla" type="rob_validacni_pravidla__type" />
 	<xsd:element name="rodinny_stav" type="rodinny_stav__type" />
 	<xsd:element name="rodne_cislo" type="rodne_cislo__type" />
+	<xsd:element name="rodne_cislo_hist" type="rodne_cislo_hist__type" />
 	<xsd:element name="rodne_cislo_puv" type="rodne_cislo_puv__type" />
 	<xsd:element name="rodne_cislo_stav" type="rodne_cislo_stav__type" />
 	<xsd:element name="rpp_akt_data" type="rpp_akt_data__type" />
 	<xsd:element name="slouceni" type="slouceni__type" />
 	<xsd:element name="slouceni_rc" type="slouceni_rc__type" />
+	<xsd:element name="slouceni_stare" type="slouceni_stare__type" />
+	<xsd:element name="stat" type="stat__type" />
 	<xsd:element name="svazek" type="svazek__type" />
 	<xsd:element name="svazek_hist" type="svazek_hist__type" />
 	<xsd:element name="svepravnost" type="svepravnost__type" />
 	<xsd:element name="svepravnost_hist" type="svepravnost_hist__type" />
-	<xsd:element name="typ_zmeny_rc" type="typ_zmeny_rc__type" />
 	<xsd:element name="uzivane_rc" type="uzivane_rc__type" />
 	<xsd:element name="verze" type="verze__type" />
+	<xsd:element name="vydat_polozky" type="vydat_polozky__type" />
 	<xsd:element name="vydej_dat" type="vydej_dat__type" />
 	<xsd:element name="vydej_kriteria" type="vydej_kriteria__type" />
 	<xsd:element name="vydej_soubor" type="vydej_soubor__type" />
 	<xsd:element name="vydejove_misto_rc" type="vydejove_misto_rc__type" />
 	<xsd:element name="vyrizeni_reklamace" type="vyrizeni_reklamace__type" />
-	<xsd:element name="zadost_poskytnuti" type="zadost_poskytnuti__type" />
-	<xsd:element name="zadost_poskytnuti_polozka" type="zadost_poskytnuti_polozka__type" />
+	<xsd:element name="zadosti_o_poskytnuti" type="zadosti_o_poskytnuti__type" />
 	<xsd:element name="zakaz_pobytu" type="zakaz_pobytu__type" />
 	<xsd:element name="zakaz_pobytu_hist" type="zakaz_pobytu_hist__type" />
 	<xsd:element name="zasobnik_aifo" type="zasobnik_aifo__type" />
@@ -80,20 +81,6 @@
 	<xsd:element name="zastoupeni_hist" type="zastoupeni_hist__type" />
 	<xsd:element name="zastupce" type="zastupce__type" />
 	<xsd:element name="zastupce_hist" type="zastupce_hist__type" />
-	<xsd:complexType name="archiv_zmen_rc__type">
-		<xsd:attribute name="id_hist" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="login" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="polozka" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="puvodni_hodnota" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="rodne_cislo_id" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="stav" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="ts" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="typzm" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="uid" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="vydejove_misto_id" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="zruseno_ts" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="zruseno_uid" use="optional" type="la:ColumnType" />
-	</xsd:complexType>
 	<xsd:complexType name="doklad__type">
 		<xsd:attribute name="cislo_jednaci" use="optional" type="la:ColumnType" />
 		<xsd:attribute name="datum_do" use="optional" type="la:ColumnType" />
@@ -117,13 +104,39 @@
 		<xsd:attribute name="typ_dokladu" use="optional" type="la:ColumnType" />
 		<xsd:attribute name="typzm" use="optional" type="la:ColumnType" />
 		<xsd:attribute name="uid" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="vydal" use="optional" type="la:ColumnType" />
 		<xsd:attribute name="vydany" use="optional" type="la:ColumnType" />
 		<xsd:attribute name="vydejove_misto_id" use="optional" type="la:ColumnType" />
 	</xsd:complexType>
+	<xsd:complexType name="doklad_hist__type">
+		<xsd:attribute name="cislo_jednaci" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="datum_do" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="datum_narozeni" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="datum_od" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="datum_od_fiktivni" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="doklad" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="id_hist" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="jmeno" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="misto_narozeni" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="nazev" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="obcanstvi" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="pohlavi" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="prijmeni" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="pripona" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="r_prijmeni" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="rodne_cislo" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="rodne_cislo_id_id" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="stav" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="ts" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="typ_dokladu" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="typzm" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="uid" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="vydany" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="vydejove_misto_id" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="zruseno_ts" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="zruseno_uid" use="optional" type="la:ColumnType" />
+	</xsd:complexType>
 	<xsd:complexType name="dorucovaci_adresa__type">
 		<xsd:attribute name="adresa_kod" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="datum_do" use="optional" type="la:ColumnType" />
 		<xsd:attribute name="datum_od" use="optional" type="la:ColumnType" />
 		<xsd:attribute name="datum_od_fiktivni" use="optional" type="la:ColumnType" />
 		<xsd:attribute name="id" use="optional" type="la:ColumnType" />
@@ -134,11 +147,9 @@
 		<xsd:attribute name="typ" use="optional" type="la:ColumnType" />
 		<xsd:attribute name="typzm" use="optional" type="la:ColumnType" />
 		<xsd:attribute name="uid" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="zapsano_do_rob" use="optional" type="la:ColumnType" />
 	</xsd:complexType>
 	<xsd:complexType name="dorucovaci_adresa_hist__type">
 		<xsd:attribute name="adresa_kod" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="datum_do" use="optional" type="la:ColumnType" />
 		<xsd:attribute name="datum_od" use="optional" type="la:ColumnType" />
 		<xsd:attribute name="datum_od_fiktivni" use="optional" type="la:ColumnType" />
 		<xsd:attribute name="id" use="optional" type="la:ColumnType" />
@@ -150,13 +161,8 @@
 		<xsd:attribute name="typ" use="optional" type="la:ColumnType" />
 		<xsd:attribute name="typzm" use="optional" type="la:ColumnType" />
 		<xsd:attribute name="uid" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="zapsano_do_rob" use="optional" type="la:ColumnType" />
 		<xsd:attribute name="zruseno_ts" use="optional" type="la:ColumnType" />
 		<xsd:attribute name="zruseno_uid" use="optional" type="la:ColumnType" />
-	</xsd:complexType>
-	<xsd:complexType name="duvod_prideleni_rc__type">
-		<xsd:attribute name="kod" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="text" use="optional" type="la:ColumnType" />
 	</xsd:complexType>
 	<xsd:complexType name="iszr_davka__type">
 		<xsd:attribute name="id" use="optional" type="la:ColumnType" />
@@ -172,16 +178,43 @@
 		<xsd:attribute name="data" use="optional" type="la:ColumnType" />
 		<xsd:attribute name="id" use="optional" type="la:ColumnType" />
 		<xsd:attribute name="notifikace_id" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="popis" use="optional" type="la:ColumnType" />
 		<xsd:attribute name="stav" use="optional" type="la:ColumnType" />
 		<xsd:attribute name="system" use="optional" type="la:ColumnType" />
 		<xsd:attribute name="ts" use="optional" type="la:ColumnType" />
 	</xsd:complexType>
-	<xsd:complexType name="iszr_notifikace_chyba__type">
-		<xsd:attribute name="data" use="optional" type="la:ColumnType" />
+	<xsd:complexType name="iszr_org_zmena__type">
+		<xsd:attribute name="aifo_cil" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="aifo_zdroj" use="optional" type="la:ColumnType" />
 		<xsd:attribute name="id" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="notifikace_id" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="id_davka" use="optional" type="la:ColumnType" />
 		<xsd:attribute name="popis" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="system" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="stav" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="ts" use="optional" type="la:ColumnType" />
+	</xsd:complexType>
+	<xsd:complexType name="iszr_rob_zmena__type">
+		<xsd:attribute name="aifo" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="id" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="id_davka" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="popis" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="stav" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="ts" use="optional" type="la:ColumnType" />
+	</xsd:complexType>
+	<xsd:complexType name="iszr_ros_zmena__type">
+		<xsd:attribute name="ico" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="id" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="id_davka" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="popis" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="stav" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="ts" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="typ" use="optional" type="la:ColumnType" />
+	</xsd:complexType>
+	<xsd:complexType name="iszr_ruian_zmena__type">
+		<xsd:attribute name="adresa_ruian" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="id" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="id_davka" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="popis" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="stav" use="optional" type="la:ColumnType" />
 		<xsd:attribute name="ts" use="optional" type="la:ColumnType" />
 	</xsd:complexType>
 	<xsd:complexType name="napomoc__type">
@@ -333,12 +366,6 @@
 		<xsd:attribute name="typzm" use="optional" type="la:ColumnType" />
 		<xsd:attribute name="uid" use="optional" type="la:ColumnType" />
 	</xsd:complexType>
-	<xsd:complexType name="odlozena_zmena__type">
-		<xsd:attribute name="rodne_cislo1_id" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="rodne_cislo_id" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="ts" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="uid" use="optional" type="la:ColumnType" />
-	</xsd:complexType>
 	<xsd:complexType name="opatrovnik__type">
 		<xsd:attribute name="datum_od" use="optional" type="la:ColumnType" />
 		<xsd:attribute name="datum_od_fiktivni" use="optional" type="la:ColumnType" />
@@ -348,7 +375,6 @@
 		<xsd:attribute name="nazev" use="optional" type="la:ColumnType" />
 		<xsd:attribute name="obyvatel_id" use="optional" type="la:ColumnType" />
 		<xsd:attribute name="obyvatel_id_stav" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="opatrovanec_id" use="optional" type="la:ColumnType" />
 		<xsd:attribute name="sidlo" use="optional" type="la:ColumnType" />
 		<xsd:attribute name="svepravnost_id" use="optional" type="la:ColumnType" />
 		<xsd:attribute name="ts" use="optional" type="la:ColumnType" />
@@ -365,7 +391,6 @@
 		<xsd:attribute name="nazev" use="optional" type="la:ColumnType" />
 		<xsd:attribute name="obyvatel_id" use="optional" type="la:ColumnType" />
 		<xsd:attribute name="obyvatel_id_stav" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="opatrovanec_id" use="optional" type="la:ColumnType" />
 		<xsd:attribute name="sidlo" use="optional" type="la:ColumnType" />
 		<xsd:attribute name="svepravnost_id" use="optional" type="la:ColumnType" />
 		<xsd:attribute name="ts" use="optional" type="la:ColumnType" />
@@ -611,6 +636,37 @@
 		<xsd:attribute name="zruseno_ts" use="optional" type="la:ColumnType" />
 		<xsd:attribute name="zruseno_uid" use="optional" type="la:ColumnType" />
 	</xsd:complexType>
+	<xsd:complexType name="predchozi_rc_jm_pr__type">
+		<xsd:attribute name="datum_od" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="datum_od_fiktivni" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="hodnota" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="id_hist" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="rodne_cislo_id" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="stav" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="ts" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="typ_zaznamu" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="typzm" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="uid" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="zruseno_ts" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="zruseno_uid" use="optional" type="la:ColumnType" />
+	</xsd:complexType>
+	<xsd:complexType name="predchozi_rc_mn_mu__type">
+		<xsd:attribute name="datum_od" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="datum_od_fiktivni" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="id_hist" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="misto_cr_id" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="misto_cr_typ" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="misto_svet_misto" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="misto_svet_stat" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="rodne_cislo_id" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="stav" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="ts" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="typ_zaznamu" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="typzm" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="uid" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="zruseno_ts" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="zruseno_uid" use="optional" type="la:ColumnType" />
+	</xsd:complexType>
 	<xsd:complexType name="predchozi_rod_stav__type">
 		<xsd:attribute name="datum_od" use="optional" type="la:ColumnType" />
 		<xsd:attribute name="datum_od_fiktivni" use="optional" type="la:ColumnType" />
@@ -689,39 +745,7 @@
 		<xsd:attribute name="vyrizeni" use="optional" type="la:ColumnType" />
 		<xsd:attribute name="zduvodneni" use="optional" type="la:ColumnType" />
 	</xsd:complexType>
-	<xsd:complexType name="reklamace_rc__type">
-		<xsd:attribute name="cislo_jednaci" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="datova_schranka" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="datum_prijeti" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="datum_vyrizeni" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="datum_zapisu" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="id" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="identifikator_iszr" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="kod_agendy" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="kod_ais" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="login" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="popis" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="reklamace_kam" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="reklamuje_kdo" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="rodne_cislo_id" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="stav" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="subjekt" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="ts" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="uid" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="verze" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="vyrizeni" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="zduvodneni" use="optional" type="la:ColumnType" />
-	</xsd:complexType>
 	<xsd:complexType name="reklamovany_udaj__type">
-		<xsd:attribute name="id" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="polozka" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="pozadovana_hodnota" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="reklamace_id" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="reklamovana_hodnota" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="udaj_id" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="vysledna_hodnota" use="optional" type="la:ColumnType" />
-	</xsd:complexType>
-	<xsd:complexType name="reklamovany_udaj_rc__type">
 		<xsd:attribute name="id" use="optional" type="la:ColumnType" />
 		<xsd:attribute name="polozka" use="optional" type="la:ColumnType" />
 		<xsd:attribute name="pozadovana_hodnota" use="optional" type="la:ColumnType" />
@@ -730,11 +754,9 @@
 		<xsd:attribute name="vysledna_hodnota" use="optional" type="la:ColumnType" />
 	</xsd:complexType>
 	<xsd:complexType name="rob_akt__type">
-		<xsd:attribute name="ais_kontrola" use="optional" type="la:ColumnType" />
 		<xsd:attribute name="duvod_a_ucel" use="optional" type="la:ColumnType" />
 		<xsd:attribute name="id" use="optional" type="la:ColumnType" />
 		<xsd:attribute name="iszr_zadost_id" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="obyvatel_id" use="optional" type="la:ColumnType" />
 		<xsd:attribute name="odeslano_poprve" use="optional" type="la:ColumnType" />
 		<xsd:attribute name="odeslano_posledni" use="optional" type="la:ColumnType" />
 		<xsd:attribute name="odpoved" use="optional" type="la:ColumnType" />
@@ -744,7 +766,6 @@
 		<xsd:attribute name="stav_zpracovani" use="optional" type="la:ColumnType" />
 		<xsd:attribute name="subjekt" use="optional" type="la:ColumnType" />
 		<xsd:attribute name="uzivatel" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="uzivatel_id" use="optional" type="la:ColumnType" />
 		<xsd:attribute name="verze" use="optional" type="la:ColumnType" />
 		<xsd:attribute name="zadost_id" use="optional" type="la:ColumnType" />
 		<xsd:attribute name="zavedeno" use="optional" type="la:ColumnType" />
@@ -789,66 +810,6 @@
 		<xsd:attribute name="prohl_mrtv_datum_pm" use="optional" type="la:ColumnType" />
 		<xsd:attribute name="prohl_mrtv_datum_pm_stav" use="optional" type="la:ColumnType" />
 	</xsd:complexType>
-	<xsd:complexType name="rob_akt_data_hist__type">
-		<xsd:attribute name="adresa_pobytu" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="adresa_pobytu_stav" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="aifo" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="aifo_kontrola" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="aifo_stav" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="datum_narozeni" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="datum_narozeni_stav" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="datum_umrti" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="datum_umrti_stav" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="doklad_druh" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="doklad_novy" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="doklad_puvodni" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="doklad_stav" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="dorucovaci_adresa" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="dorucovaci_adresa_stav" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="dorucovaci_adresa_text" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="dorucovaci_adresa_typ" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="id" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="jmeno" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="jmeno_stav" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="misto_narozeni_cr_id" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="misto_narozeni_cr_typ" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="misto_narozeni_stav" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="misto_narozeni_svet_misto" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="misto_narozeni_svet_stat" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="misto_umrti_cr_id" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="misto_umrti_cr_typ" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="misto_umrti_stav" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="misto_umrti_svet_misto" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="misto_umrti_svet_stat" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="obcanstvi_nove" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="obcanstvi_puvodni" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="obcanstvi_stav" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="prijmeni" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="prijmeni_stav" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="prohl_mrtv_datum_pm" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="prohl_mrtv_datum_pm_stav" use="optional" type="la:ColumnType" />
-	</xsd:complexType>
-	<xsd:complexType name="rob_akt_hist__type">
-		<xsd:attribute name="ais_kontrola" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="duvod_a_ucel" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="id" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="iszr_zadost_id" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="obyvatel_id" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="odeslano_poprve" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="odeslano_posledni" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="odpoved" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="operace" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="pocet_pokusu" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="rob_akt_data_id" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="stav_zpracovani" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="subjekt" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="uzivatel" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="uzivatel_id" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="verze" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="zadost_id" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="zavedeno" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="znepristupneni" use="optional" type="la:ColumnType" />
-	</xsd:complexType>
 	<xsd:complexType name="rob_blacklist__type">
 		<xsd:attribute name="obyvatel_id" use="optional" type="la:ColumnType" />
 		<xsd:attribute name="text" use="optional" type="la:ColumnType" />
@@ -881,6 +842,7 @@
 		<xsd:attribute name="misto_narozeni_svet_stat" use="optional" type="la:ColumnType" />
 		<xsd:attribute name="misto_narozeni_svet_stat_txt" use="optional" type="la:ColumnType" />
 		<xsd:attribute name="obyvatel_id" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="platnost" use="optional" type="la:ColumnType" />
 		<xsd:attribute name="pohlavi" use="optional" type="la:ColumnType" />
 		<xsd:attribute name="posledni_zmena" use="optional" type="la:ColumnType" />
 		<xsd:attribute name="prijmeni" use="optional" type="la:ColumnType" />
@@ -890,6 +852,23 @@
 		<xsd:attribute name="stav_rc" use="optional" type="la:ColumnType" />
 		<xsd:attribute name="verze" use="optional" type="la:ColumnType" />
 		<xsd:attribute name="vydejove_misto_id" use="optional" type="la:ColumnType" />
+	</xsd:complexType>
+	<xsd:complexType name="rodne_cislo_hist__type">
+		<xsd:attribute name="aifo" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="aifo_kontrola" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="blokace" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="cislo_jednaci" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="datum_prideleni" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="duvod_prideleni" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="id_hist" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="rodne_cislo_id" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="stav_rc" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="ts" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="typzm" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="uid" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="vydejove_misto_id" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="zruseno_ts" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="zruseno_uid" use="optional" type="la:ColumnType" />
 	</xsd:complexType>
 	<xsd:complexType name="rodne_cislo_puv__type">
 		<xsd:attribute name="cislo_jednaci" use="optional" type="la:ColumnType" />
@@ -910,7 +889,6 @@
 		<xsd:attribute name="datum_od_fiktivni" use="optional" type="la:ColumnType" />
 		<xsd:attribute name="id" use="optional" type="la:ColumnType" />
 		<xsd:attribute name="polozka" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="rozpor" use="optional" type="la:ColumnType" />
 		<xsd:attribute name="stav" use="optional" type="la:ColumnType" />
 		<xsd:attribute name="ts" use="optional" type="la:ColumnType" />
 		<xsd:attribute name="typzm" use="optional" type="la:ColumnType" />
@@ -940,13 +918,50 @@
 		<xsd:attribute name="zruseno_uid" use="optional" type="la:ColumnType" />
 	</xsd:complexType>
 	<xsd:complexType name="slouceni_rc__type">
-		<xsd:attribute name="id" use="optional" type="la:ColumnType" />
 		<xsd:attribute name="rodne_cislo1_id" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="rodne_cislo2_id" use="optional" type="la:ColumnType" />
 		<xsd:attribute name="rodne_cislo_id" use="optional" type="la:ColumnType" />
 		<xsd:attribute name="ts" use="optional" type="la:ColumnType" />
 		<xsd:attribute name="uid" use="optional" type="la:ColumnType" />
 		<xsd:attribute name="zruseno_ts" use="optional" type="la:ColumnType" />
 		<xsd:attribute name="zruseno_uid" use="optional" type="la:ColumnType" />
+	</xsd:complexType>
+	<xsd:complexType name="slouceni_stare__type">
+		<xsd:attribute name="adresa_cr_id" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="dat_ucin" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="duvod_zmeny" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="id" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="jmeno" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="jmeno_puvodni" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="m_nar" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="novy_id" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="pobyt_od" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="prijmeni" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="prijmeni_puvodni" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="r_prijmeni" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="r_prijmeni_puvodni" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="rodinny_stav" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="rodne_cislo" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="rodne_cislo_nove" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="rodne_cislo_puvodni" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="syst_priznak" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="ts" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="txt" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="typ_pobytu" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="uid" use="optional" type="la:ColumnType" />
+	</xsd:complexType>
+	<xsd:complexType name="stat__type">
+		<xsd:attribute name="dvouznakovy_kod" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="id" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="nazev_statu" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="nazev_statu_anglicky" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="nazev_statu_zkraceny" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="numericky_kod" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="platnost_do" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="platnost_od" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="poznamka" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="stav" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="triznakovy_kod" use="optional" type="la:ColumnType" />
 	</xsd:complexType>
 	<xsd:complexType name="svazek__type">
 		<xsd:attribute name="datum_uzavreni" use="optional" type="la:ColumnType" />
@@ -1028,10 +1043,6 @@
 		<xsd:attribute name="zruseno_ts" use="optional" type="la:ColumnType" />
 		<xsd:attribute name="zruseno_uid" use="optional" type="la:ColumnType" />
 	</xsd:complexType>
-	<xsd:complexType name="typ_zmeny_rc__type">
-		<xsd:attribute name="kod" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="text" use="optional" type="la:ColumnType" />
-	</xsd:complexType>
 	<xsd:complexType name="uzivane_rc__type">
 		<xsd:attribute name="datum_do" use="optional" type="la:ColumnType" />
 		<xsd:attribute name="datum_od" use="optional" type="la:ColumnType" />
@@ -1048,6 +1059,12 @@
 		<xsd:attribute name="ts" use="optional" type="la:ColumnType" />
 		<xsd:attribute name="verze_aplikace" use="optional" type="la:ColumnType" />
 		<xsd:attribute name="verze_dat" use="optional" type="la:ColumnType" />
+	</xsd:complexType>
+	<xsd:complexType name="vydat_polozky__type">
+		<xsd:attribute name="historicke" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="id" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="id_zadost" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="polozka_id" use="optional" type="la:ColumnType" />
 	</xsd:complexType>
 	<xsd:complexType name="vydej_dat__type">
 		<xsd:attribute name="agendova_role" use="optional" type="la:ColumnType" />
@@ -1106,7 +1123,6 @@
 		<xsd:attribute name="kod_ruian" use="optional" type="la:ColumnType" />
 		<xsd:attribute name="kod_typ" use="optional" type="la:ColumnType" />
 		<xsd:attribute name="plati" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="pracoviste" use="optional" type="la:ColumnType" />
 		<xsd:attribute name="txt" use="optional" type="la:ColumnType" />
 		<xsd:attribute name="typ" use="optional" type="la:ColumnType" />
 		<xsd:attribute name="zkratka" use="optional" type="la:ColumnType" />
@@ -1120,28 +1136,21 @@
 		<xsd:attribute name="vyjadreni" use="optional" type="la:ColumnType" />
 		<xsd:attribute name="vyrizoval_kdo" use="optional" type="la:ColumnType" />
 	</xsd:complexType>
-	<xsd:complexType name="zadost_poskytnuti__type">
+	<xsd:complexType name="zadosti_o_poskytnuti__type">
 		<xsd:attribute name="adresa_doruceni_kod" use="optional" type="la:ColumnType" />
 		<xsd:attribute name="adresa_doruceni_text" use="optional" type="la:ColumnType" />
 		<xsd:attribute name="adresa_doruceni_typ" use="optional" type="la:ColumnType" />
 		<xsd:attribute name="cislo_jednaci" use="optional" type="la:ColumnType" />
 		<xsd:attribute name="id" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="komu" use="optional" type="la:ColumnType" />
 		<xsd:attribute name="obyvatel_id" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="ovm_zkratka" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="stav" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="pracoviste" use="optional" type="la:ColumnType" />
+		<xsd:attribute name="stav_zadosti" use="optional" type="la:ColumnType" />
 		<xsd:attribute name="tp_od" use="optional" type="la:ColumnType" />
 		<xsd:attribute name="ts_vyridil" use="optional" type="la:ColumnType" />
 		<xsd:attribute name="ts_zalozil" use="optional" type="la:ColumnType" />
 		<xsd:attribute name="uid_vyridil" use="optional" type="la:ColumnType" />
 		<xsd:attribute name="uid_zalozil" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="verze" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="zadatel" use="optional" type="la:ColumnType" />
-	</xsd:complexType>
-	<xsd:complexType name="zadost_poskytnuti_polozka__type">
-		<xsd:attribute name="historicke" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="id" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="polozka" use="optional" type="la:ColumnType" />
-		<xsd:attribute name="zadost_poskytnuti_id" use="optional" type="la:ColumnType" />
 	</xsd:complexType>
 	<xsd:complexType name="zakaz_pobytu__type">
 		<xsd:attribute name="datum_od" use="optional" type="la:ColumnType" />

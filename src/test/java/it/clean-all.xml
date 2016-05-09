@@ -1,7 +1,68 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <dataset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../dataset.xsd">
 
+	<!-- code tables -->
+	<rodinny_stav/>
+	<vydejove_misto_rc/>
+
+	<!-- EO business -->
 	<obyvatel/>
+	<obyvatel_hist/>
+	<dorucovaci_adresa/>
+	<dorucovaci_adresa_hist/>
+	<zakaz_pobytu/>
+	<zakaz_pobytu_hist/>
+	<obyvatel_stav/>
+	<svepravnost/>
+	<svepravnost_hist/>
+	<opatrovnik/>
+	<opatrovnik_hist/>
+	<svazek/>
+	<svazek_hist/>
+	<slouceni/>
+	<prohlaseni_za_mrtveho/>
+	<prohlaseni_za_mrtveho_hist/>
+	<predchozi_pohlavi/>
+	<predchozi_rc/>
+	<predchozi_jm_pr/>
+	<predchozi_rod_stav/>
+	<predchozi_adresa/>
+	<predchozi_rodic/>
+	<predchozi_mn_mu/>
+	<predchozi_dn_du/>
+	<predchozi_aifo/>
+	<obcanstvi/>
+	<obcanstvi_hist/>
+	<nezvestnost/>
+	<nezvestnost_hist/>
+	<napomoc/>
+	<napomoc_hist/>
+	<osvojeni/>
+	<osvojeni_hist/>
+	<osvojeni_zletileho/>
+	<osvojeni_zletileho_hist/>
+	<poznamka_hist/>
+	<zastoupeni/>
+	<zastoupeni_hist/>
+	<zastupce_hist/>
+	<zastupce/>
+	<zastupce_hist/>
+	<reklamace/>
+	<reklamovany_udaj/>
+	<vyrizeni_reklamace/>
+	<osvojeni_zletileho/>
+	<osvojeni_zletileho_hist/>
+
+	<!-- RRC business -->
 	<rodne_cislo/>
+	<rodne_cislo_stav/>
+	<rodne_cislo_puv/>
+	<poznamka_rc/>
+	<slouceni_rc/>
+	<uzivane_rc/>
+	<doklad/>
+	<slouceni_rc/>
+
+
 
 </dataset>
