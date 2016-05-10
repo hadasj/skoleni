@@ -5,5 +5,7 @@
 						jmeno="Hugo" prijmeni="Boss"  rodne_cislo="9612114369" datum_narozeni="1996-12-11"  pohlavi="M"
 						aifo_kontrola="@auto" posledni_zmena="2016-12-23 11:28:59"
 			/>
+  <obyvatel id="2" druh="O" platnost="P" verze="0" prijmeni="Boss" aifo_kontrola="@auto" posledni_zmena="@auto"/>
+  <obyvatel id="3" druh="O" platnost="P" verze="1" prijmeni="@auto" aifo_kontrola="@auto" posledni_zmena="@auto"/>
 
 </dataset>

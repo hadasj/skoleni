@@ -5,6 +5,8 @@
 						jmeno="Hugo" prijmeni="Boss"  rodne_cislo="9612114369" datum_narozeni="1996-12-11"  pohlavi="M"
 						posledni_zmena="2016-12-23 11:28:59"
 			/>
+  <obyvatel id="2" druh="O" platnost="P" verze="0" prijmeni="Boss"/>
+  <obyvatel id="3" druh="O" platnost="P" verze="1" />
 
 	<!-- newly inserted -->
 	<obyvatel jmeno="Šárka" prijmeni="Klemensová" datum_narozeni="1989-01-16" pohlavi="F" posledni_zmena="@timestamp"/>

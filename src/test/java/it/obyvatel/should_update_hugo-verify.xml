@@ -1,9 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <dataset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../dataset.xsd">
 
-	<obyvatel id="1" druh="O" platnost="P" verze="0"
+	<obyvatel id="1" druh="O" platnost="P" verze="1"
 						jmeno="Alfons" prijmeni="Kos"  rodne_cislo="9612114369" datum_narozeni="1996-12-11"  pohlavi="M"
 						posledni_zmena="@timestamp"
 			/>
+  <obyvatel id="2" druh="O" platnost="P" verze="0" prijmeni="Boss"/>
+  <obyvatel id="3" druh="O" platnost="P" verze="1" />
 
 </dataset>

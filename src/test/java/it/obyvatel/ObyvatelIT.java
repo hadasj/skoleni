@@ -12,8 +12,8 @@ import javax.validation.ValidationException;
 
 import net.sf.lightair.LightAirSpringRunner;
 import net.sf.lightair.annotation.Setup;
-
 import net.sf.lightair.annotation.Verify;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,6 +38,7 @@ public class ObyvatelIT {
 
   private static final SimpleDateFormat FORMAT = new SimpleDateFormat("dd.MM.yyyy");
   private static final int OBYVATEL_ID = 1;
+  private static final int OBYVATEL_VERSION = 0;
 
   @Autowired
   private ObyvatelService obyvatelService;
@@ -50,7 +51,7 @@ public class ObyvatelIT {
     List<Obyvatel> result = obyvatelService.find(dto);
 
     assertNotNull(result);
-    assertEquals(1, result.size());
+    assertEquals(2, result.size());
     Obyvatel obyvatel = result.get(0);
 
     assertEquals("Hugo", obyvatel.getJmeno());
@@ -80,6 +81,7 @@ public class ObyvatelIT {
   public void should_update_hugo() {
     ObyvatelUpdateDto dto = new ObyvatelUpdateDto();
     dto.setId(OBYVATEL_ID);
+    dto.setVersion(OBYVATEL_VERSION);
     dto.setJmeno("Alfons");
     dto.setPrijmeni("Kos");
 
@@ -100,8 +102,8 @@ public class ObyvatelIT {
   }
 
   @Test
-  @Verify("../clean-all.xml")
+  @Verify
   public void should_delete_hugo() {
-    obyvatelService.delete(OBYVATEL_ID);
+    obyvatelService.delete(OBYVATEL_ID, OBYVATEL_VERSION);
   }
 }
