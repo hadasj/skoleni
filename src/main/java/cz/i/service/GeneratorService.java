@@ -16,7 +16,8 @@ import cz.i.entity.RodneCislo;
  */
 public class GeneratorService {
 
-  private static final DateFormat FORMAT = new SimpleDateFormat("yyMMdd");
+  private static final DateFormat SHORT_FORMAT = new SimpleDateFormat("yyMMdd");
+  private static final DateFormat LONG_FORMAT = new SimpleDateFormat("yyyyMMdd");
   private static final int MAX_SERIE = 999;
 
   @Autowired
@@ -36,11 +37,13 @@ public class GeneratorService {
     rodneCislo.setDatumNarozeni(datumNarozeni);
     rodneCislo.setRodneCislo(computeRodneCislo(datumNarozeni, pohlavi, serie));
     rodneCislo.setStavRc(StavRc.V);
+    rodneCislo.setPohlavi(pohlavi);
+    rodneCislo.setDatumNarozeniText(LONG_FORMAT.format(datumNarozeni));
     return rodneCislo;
   }
 
   private String computeRodneCislo(Date datumNarozeni, Pohlavi pohlavi, int i) {
-    String datumNarozeniString = FORMAT.format(datumNarozeni);
+    String datumNarozeniString = SHORT_FORMAT.format(datumNarozeni);
 
     if (pohlavi.equals(Pohlavi.F)) {
       datumNarozeniString = Integer.toString(Integer.parseInt(datumNarozeniString) + 5000);

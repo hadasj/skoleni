@@ -1,0 +1,5 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../dataset.xsd">
+  <rodne_cislo id="1" jmeno="Light" prijmeni="Air" pohlavi="M" rodne_cislo="@auto" spravne="A" blokace="N" stav_rc="A"
+               datum_narozeni_text="@auto" verze="@auto" posledni_zmena="@auto"/>
+</dataset>

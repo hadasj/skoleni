@@ -12,7 +12,6 @@ import net.sf.lightair.internal.factory.Factory;
 
 import org.dbunit.dataset.DataSetException;
 import org.dbunit.dataset.ITable;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,20 +35,17 @@ public class LightAirTrainingIT {
   @Autowired
   private RodneCisloDao dao;
 
-  @Ignore
   @Test
   @Setup("../clean-all.xml")
   public void should_generate_100_rc() throws SQLException, DataSetException {
     Date datumNarozeni = new Date();
-    //TODO: FIX generator service
     generator.generate(datumNarozeni, Pohlavi.F, 100);
 
     ITable rodneCislo = getTable("rodne_cislo");
     assertEquals(100, rodneCislo.getRowCount());
   }
 
-  @Ignore
-  @Test //TODO: FIX setup XML
+  @Test
   @Setup.List({@Setup("../clean-all.xml"), @Setup})
   public void should_find_Light_Air() {
     List<RodneCislo> result = dao.searchByPrijmeni("Air");

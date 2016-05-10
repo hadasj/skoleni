@@ -38,10 +38,10 @@ public class ObyvatelService {
     obyvatelDao.update(dto);
   }
 
-  public void delete(Integer id) {
+  public void delete(Integer id, Integer version) {
     if (id == null) {
       throw new IllegalArgumentException("id is null");
     }
-    obyvatelDao.delete(id);
+    obyvatelDao.delete(id, version);
   }
 }
