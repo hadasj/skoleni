@@ -7,7 +7,9 @@ import java.util.List;
 import java.util.UUID;
 
 import javax.persistence.EntityManager;
+import javax.persistence.OptimisticLockException;
 import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Predicate;
@@ -54,20 +56,31 @@ public class ObyvatelDao {
     if(isNotEmpty(criteriaDto.getRodneCislo())) {
       searchCriteria = builder.and(searchCriteria, builder.equal(obyvatel.get("rodne_cislo"), criteriaDto.getRodneCislo()));
     }
+    query.orderBy(builder.asc(obyvatel.get("id")));
 
     query.where(searchCriteria);
     return entityManager.createQuery(query).getResultList();
   }
 
-  public Obyvatel get(int id) {
-    return entityManager.find(Obyvatel.class, id);
+  public Obyvatel get(int id, int version) {
+    Query query = entityManager.createNamedQuery(Obyvatel.GET_OBYVATEL_BY_ID_VERSION);
+    query.setParameter("id", id);
+    query.setParameter("version", version);
+    List<Obyvatel> result = query.getResultList();
+    if (result.isEmpty()) {
+      throw new OptimisticLockException("Obyvatel(id=" + id + ")");
+    } else {
+      return result.get(0);
+    }
   }
 
   @Transactional
   public void update(ObyvatelUpdateDto dto) {
-    Obyvatel obyvatel = get(dto.getId());
+    Obyvatel obyvatel = get(dto.getId(), dto.getVersion());
 
     mapper.map(dto, obyvatel);
+    // increment version
+    obyvatel.setVerze(obyvatel.getVerze() + 1);
     obyvatel.setPosledniZmena(new Date());
   }
   
@@ -87,8 +100,8 @@ public class ObyvatelDao {
 	}
 
   @Transactional
-  public void delete(Integer id) {
-    Obyvatel obyvatel = get(id);
+  public void delete(Integer id, Integer version) {
+    Obyvatel obyvatel = get(id, version);
     entityManager.remove(obyvatel);
   }
 }

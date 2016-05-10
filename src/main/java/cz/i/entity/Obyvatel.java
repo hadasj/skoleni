@@ -9,6 +9,8 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
@@ -20,7 +22,13 @@ import cz.i.common.Pohlavi;
  * @author jan.hadas@i.cz
  */
 @Entity
+@NamedQueries(
+    @NamedQuery(name = Obyvatel.GET_OBYVATEL_BY_ID_VERSION, query = "select o from Obyvatel o " +
+        "where o.id = :id and o.verze = :version")
+)
 public class Obyvatel {
+
+  public static final String GET_OBYVATEL_BY_ID_VERSION = "Obyvatel.getObyvatelByIdVersion";
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)

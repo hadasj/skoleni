@@ -10,6 +10,9 @@ public class ObyvatelUpdateDto extends ObyvatelDto {
   @NotNull
   private Integer id;
 
+  @NotNull
+  private Integer version;
+
   public Integer getId() {
     return id;
   }
@@ -18,4 +21,11 @@ public class ObyvatelUpdateDto extends ObyvatelDto {
     this.id = id;
   }
 
+  public Integer getVersion() {
+    return version;
+  }
+
+  public void setVersion(Integer version) {
+    this.version = version;
+  }
 }
